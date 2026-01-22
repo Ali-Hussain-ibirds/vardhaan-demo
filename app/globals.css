@@ -1,0 +1,496 @@
+@import "tailwindcss";
+
+:root {
+  --accent: hsl(170, 92%, 42%);
+  --accentLight: hsl(171, 76%, 95%);
+  --accentDark: hsl(172, 95%, 16%);
+  --accentSuperDark: hsl(172, 93%, 11%);
+  --text: hsl(0, 0%, 12%);
+  --textLight: hsl(0, 0%, 23%);
+  --transition: all 0.3s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.trans{
+  transition: all 0.5s ease-in-out ;
+}
+
+.parent {
+  width: 100%;
+
+  .container {
+    max-width: 1300px;
+    margin: 0px auto;
+    height: 100%;
+  }
+}
+
+* {
+  font-family: var(--font-inter), sans-serif;
+   scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-dm-sans), sans-serif;
+  font-weight: 700;
+  span {
+    color: var(--accent) !important;
+  }
+}
+
+.btn {
+  background: var(--accent);
+  color: var(--accentSuperDark);
+  padding: 10px 30px;
+  border-radius: 100px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* font-family: "DM Sans", sans-serif; */
+  font-weight: 600;
+}
+.btn:hover {
+  background: var(--accentDark);
+  color: var(--accent);
+  transform: translateY(-4px);
+}
+
+
+.btn2 {
+  background: white;
+  color: var(--accentSuperDark);
+  padding: 10px 30px;
+  border-radius: 100px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* font-family: "DM Sans", sans-serif; */
+  font-weight: 600;
+}
+.btn2:hover {
+  background: var(--accentDark);
+  color: var(--accent);
+  transform: translateY(-4px);
+}
+
+.bg-img-cover {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.bg-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: red;
+  top: 0px;
+}
+
+.bg-overlay {
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.bg-pattern {
+  background: var(--accentLight);
+}
+
+.bg-pattern-half {
+  background: linear-gradient(180deg, var(--accentLight) 50%, transparent 50%);
+}
+
+.contact-form {
+  width: 100%;
+  input,
+  textarea {
+    border-bottom: 1px solid white;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    width: 100%;
+    outline: none;
+    transition: var(--transition);
+    color: white;
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.509);
+    }
+
+    &:focus {
+      border-bottom: 1px solid var(--accent);
+    }
+  }
+}
+
+.si {
+  @apply bg-[var(--accentDark)]/5 border-[var(--accent)] border text-sm text-[var(--accent)] px-4 py-1 rounded-full;
+}
+
+.blogPara {
+  font-family: var(--font-dm-sans), sans-serif;
+  font-weight: 400;
+  color: rgb(119, 119, 119);
+}
+
+.blogPara h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 1.5rem 0 1rem 0;
+  line-height: 1.2;
+}
+
+.blogPara h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 1.5rem 0 1rem 0;
+  line-height: 1.3;
+}
+
+.blogPara h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 1.25rem 0 0.75rem 0;
+  line-height: 1.4;
+}
+
+.blogPara p {
+  margin: 1rem 0;
+  line-height: 1.7;
+}
+
+.blogPara ul, .blogPara ol {
+  margin: 1rem 0;
+  padding-left: 2rem;
+}
+
+.blogPara li {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.blogPara strong {
+  font-weight: 600;
+  color: #333;
+}
+
+.blogPara em {
+  font-style: italic;
+}
+
+.blogPara blockquote {
+  border-left: 4px solid var(--accent);
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  background-color: #f8f9fa;
+  font-style: italic;
+}
+
+.blogPara blockquote p {
+  margin: 0;
+}
+
+.blogPara figure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.blogPara figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.blogPara hr {
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 2rem 0;
+}
+
+.blogPara img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.foot-link {
+  @apply text-xs hover:text-[var(--accent)];
+}
+
+.menu {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  flex-direction: column;
+  cursor: pointer;
+
+  &:hover {
+    span:nth-child(2) {
+      width: 30px;
+    }
+  }
+
+  span {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    display: block;
+    border-radius: 10px;
+    transition: var(--transition);
+
+    &:nth-child(2) {
+      width: 20px;
+    }
+  }
+}
+
+.close {
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+
+  &:hover {
+    transform: rotate(125deg);
+  }
+
+  span {
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    display: block;
+    border-radius: 10px;
+    transition: var(--transition);
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+    left: 50%;
+
+    &:nth-child(2) {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.navLink {
+  @apply text-white text-4xl ;
+  font-family: var(--font-dm-sans), sans-serif;
+  position: relative;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column !important;
+  gap: 8px;
+  width: fit-content;
+  align-items: flex-start;
+  justify-content: start !important;
+  font-weight: 700;
+  width: 100%;
+
+
+  &::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: var(--accent);
+    transition: var(--transition);
+    position: absolute;
+    bottom: -10%;
+  }
+
+  &.hoverClass:hover::after{
+    width: 100%;
+    color: var(--accent);
+  }
+  &.active::after{
+    width: 100%;
+    color: var(--accent);
+  }
+
+
+}
+
+
+
+
+*::-webkit-scrollbar {
+  display: none;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hero{
+  .swiper{
+    height: 100%;
+    width: 100%;
+    .swiper-slide {
+      
+    }
+  }
+}
+
+.servicesSlider{
+
+  width: 100%;
+  .swiper{
+    height: 100%;
+    width: 100%;
+    padding: 20px 0px 50px  0px;
+
+    .swiper-slide {
+    
+    }
+  }
+}
+
+.TreatmentSlider{
+
+  width: 100%;
+  .swiper{
+    height: 100%;
+    width: 100%;
+    padding: 20px 0px 50px  0px;
+    .swiper-slide {
+     
+    }
+  }
+}
+
+
+
+.swiper-pagination-bullet{
+  background: var(--accent) !important;
+}
+
+
+/* Standard syntax */
+::selection {
+  @apply bg-[var(--accent)]/40;
+  color: var(--accentSuperDark);
+  
+}
+
+/* For Firefox */
+::-moz-selection {
+  background: var(--accent);
+  color: var(--accentSuperDark);
+}
+
+
+.hook{
+  background: radial-gradient( var(--accentDark), var(--accentSuperDark) );
+  
+
+   
+}
+
+
+
+.wwt-card{
+  transition: all 0.5s ease-in-out;
+  &*{
+  transition: all 0.5s ease-in-out;
+
+  }
+  &:hover{
+    p{
+      color: var(--accentDark) !important;
+    }
+    div{
+      background: var(--accent);
+    }
+  }
+}
+
+.journey{
+  background: linear-gradient(transparent,  hwb(170 4% 19% / 0.281));
+}
+
+/* Core Values Swiper Styles */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--accent) !important;
+  transform: scale(1.2);
+}
+
+/* Testimonial Swiper Pagination Styles */
+.testimonial-swiper {
+  position: relative;
+  padding-bottom: 3rem !important;
+}
+
+.testimonial-swiper .swiper-pagination {
+  position: absolute;
+  bottom: 0 !important;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto !important;
+  margin-top: 1.5rem;
+}
+
+.testimonial-swiper .swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.5) !important;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+  background: var(--accent) !important;
+  transform: scale(1.3);
+}
